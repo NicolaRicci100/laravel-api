@@ -16,4 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// rotta api per avere la lista dei post
 Route::get('/posts', [PostController::class, 'index']);
+
+// rotta api per avere il dettaglio dei post
+Route::get('/posts/{post}', [PostController::class, 'show']);
