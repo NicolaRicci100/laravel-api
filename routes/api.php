@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\PostController;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -21,3 +22,6 @@ Route::get('/posts', [PostController::class, 'index']);
 
 // rotta api per avere il dettaglio dei post
 Route::get('/posts/{post}', [PostController::class, 'show']);
+
+// rotta per ricevere messaggio e mandare mail
+Route::post('/contact-message', [ContactController::class, 'message']);
